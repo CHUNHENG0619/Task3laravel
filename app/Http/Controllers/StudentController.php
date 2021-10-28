@@ -18,7 +18,8 @@ class StudentController extends Controller
         $student->name = $request->input('name');
         $student->password = $request->input('password');
         $student->save();
-        
+        $student = Student::all();
+        return view('student.index', compact('student'));
     }
     public function index()
     {
