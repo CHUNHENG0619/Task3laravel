@@ -39,7 +39,7 @@
             if (update == true) {
                 var updateNum = prompt("Which record you would like to modify?\n1. NAME\n2. EMAIL");
 
-                while (updateNum != 1 && updateNum != 2) {
+                while (updateNum != 1 && updateNum != 2 && updateNum != null && updateNum != '') {
                     alert("Invalid option");
                     updateNum = prompt("Which record you would like to modify?\n1. NAME\n2. EMAIL");
                 }
@@ -50,6 +50,10 @@
                         break;
                     case '2':
                         updateNum = "email";
+                        break;
+                    case null:
+                    case '':
+                        return false;
                 }
 
                 var value = prompt("What values you would like to change to?");
