@@ -14,11 +14,11 @@ use App\Http\Controllers\FormController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('ys.welcome');
 });
 
 Route::get('form', function () {
-    return view('form');
+    return view('ys.form');
 });
 
 Route::post('form', [FormController::class, 'addPerson']);
@@ -26,7 +26,7 @@ Route::post('form', [FormController::class, 'addPerson']);
 Route::get('personView', [FormController::class, 'viewPerson']);
 
 Route::get('login',function(){
-    return view('login');
+    return view('ys.login');
 });
 
 Route::post('login', [FormController::class,'loginUser']);

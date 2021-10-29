@@ -20,7 +20,7 @@ class FormController extends Controller
 
         echo "<script>alert('Successful to register!');</script>";
 
-        return view('form');
+        return view('ys.form');
     }
 
     // to retrieve record
@@ -33,7 +33,7 @@ class FormController extends Controller
             ->whereDate('created_at', '>', "2021-10-01")
             ->get();
 
-        return view("personView", ['tableView' => $date_check]);
+        return view("ys.personView", ['tableView' => $date_check]);
     }
 
     function loginUser(Request $request)
@@ -44,12 +44,12 @@ class FormController extends Controller
             if ($request->email == $i->email) {
                 if (Hash::check(($request->password), $i->password)) {
                     echo '<script>alert(\'Login Successfully!\');</script>';
-                    return view("welcome");
+                    return view("ys.welcome");
                 }
             }
         }
         echo '<script>alert(\'Failed to Login. Check your email or password.\');</script>';
-        return view("login");
+        return view("ys.login");
     }
 
     public static function update(Request $request)

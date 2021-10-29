@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/form.css">
 </head>
 
-<body>    
+<body>
     <form action="" method="POST">
-    @csrf
+        @csrf
         <h1>Sign Up Form</h1>
         <div class="icon">
             <i class="fas fa-user-circle"></i>
@@ -28,7 +28,7 @@
             <button type="submit"><strong>SIGN UP</strong></button>
 
         </div>
-    </form
+    </form>
 </body>
 
 </html>
